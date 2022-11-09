@@ -1,0 +1,23 @@
+.login {
+    padding-top: 10%;
+
+    .board {
+        width: 100%;
+        max-width: 18rem;
+        margin: 0 auto;
+
+        .login-title {
+            font-size: 2.6rem;
+            color: #444;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .tools {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.field {
+    margin-bottom: 1rem;
+
+    .label {
+        display: inline-block;
+        margin: 0 0 .3rem;
+    }
+
+    .help {
+        color: #888;
+        display: inline-block;
+        margin: .3rem 0 0;
+    }
+}
+
+.input,
+.textarea,
+.select {
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f0f3f8;
+    border: 0;
+    border-radius: .2rem;
+
+    &:focus {
+        background-color: #e4e9f3;
+    }
+}
+
+.input {
+    height: 2.6rem;
+    padding: 0 .8rem;
+}
+
+.textarea {
+    padding: .8rem;
+    resize: vertical;
+}
+
+.select {
+    height: 2.6rem;
+    padding: 0 .8rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 16px 12px;
+    appearance: none;
+}
+
+.btn {
+    height: 2.6rem;
+    outline: none;
+    padding: 0 .8rem;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: .2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #e6e6e6;
+
+    &:hover {
+        background-color: #dfdfdf;
+    }
+
+    &.btn-full {
+        display: block;
+        width: 100%;
+    }
+
+    &.btn-primary {
+        color: #fff;
+        background-color: #376f89;
+
+        &:hover {
+            background-color: #2f5e74;
+        }
+    }
+}
+
+.submit {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}

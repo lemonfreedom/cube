@@ -1,0 +1,49 @@
+@keyframes fade {
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.notice {
+    position: fixed;
+    min-width: 18rem;
+    top: .4rem;
+    left: 50%;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    transform: translateX(-50%);
+    color: #fff;
+    opacity: 0;
+    animation: fade 3s forwards;
+    z-index: 10000;
+    border-radius: .3rem;
+    filter: drop-shadow(0 0 .2rem rgba(0, 0, 0, .5));
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.info {
+        background-color: #376f89;
+    }
+
+    &.warning {
+        background-color: #d35d1d;
+    }
+
+    &.error {
+        background-color: #d8221e;
+    }
+
+    &.success {
+        background-color: #106d30;
+    }
+}
