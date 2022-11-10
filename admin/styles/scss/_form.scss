@@ -20,9 +20,9 @@
     outline: none;
     box-sizing: border-box;
     color: #333;
-    background-color: #f0f3f8;
+    background-color: #fff;
     border: 0;
-    border-radius: .2rem;
+    border-radius: 0;
 
     &:focus {
         background-color: #e4e9f3;
@@ -30,7 +30,8 @@
 }
 
 .input {
-    height: 2.6rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
     padding: 0 .8rem;
 }
 
@@ -40,7 +41,7 @@
 }
 
 .select {
-    height: 2.6rem;
+    height: 2.4rem;
     padding: 0 .8rem;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
@@ -50,19 +51,18 @@
 }
 
 .btn {
-    height: 2.6rem;
+    height: 2.4rem;
     outline: none;
     padding: 0 .8rem;
     box-sizing: border-box;
     border: 0;
-    border-radius: .2rem;
-    cursor: pointer;
     display: flex;
     align-items: center;
-    gap: .3rem;
+    gap: .2rem;
     font-weight: bold;
     color: #333;
     background-color: #e6e6e6;
+    cursor: pointer;
 
     &:hover {
         background-color: #dfdfdf;
@@ -75,10 +75,10 @@
 
     &.btn-primary {
         color: #fff;
-        background-color: #376f89;
+        background-color: $primary-color;
 
         &:hover {
-            background-color: #2f5e74;
+            background-color: $primary-color;
         }
     }
 }

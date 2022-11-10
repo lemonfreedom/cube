@@ -32,18 +32,18 @@
     align-items: center;
 
     &.info {
-        background-color: #376f89;
+        background-color: $primary-color;
     }
 
     &.warning {
-        background-color: #d35d1d;
+        background-color: $warning-color;
     }
 
     &.error {
-        background-color: #d8221e;
+        background-color: $error-color;
     }
 
     &.success {
-        background-color: #106d30;
+        background-color: $success-color;
     }
 }

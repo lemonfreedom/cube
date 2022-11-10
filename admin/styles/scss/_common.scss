@@ -1,3 +1,9 @@
+$primary-color: #21759b;
+$warning-color: #d54e21;
+$error-color: #d8221e;
+$success-color: #106d30;
+$navbar-bg-color: #333333;
+
 html,
 body {
     width: 100%;
@@ -5,10 +11,10 @@ body {
 }
 
 body {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1;
     color: #333;
-    background-color: #fff;
+    background-color: #efefef;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,10 +22,10 @@ body {
 
 a {
     text-decoration: none;
-    color: #376f89;
+    color: $primary-color;
 
     &:hover {
-        color: #2f5e74;
+        color: $warning-color;
     }
 }
 
@@ -37,7 +43,7 @@ a {
     margin: 1rem 0;
     display: flex;
     align-items: center;
-    color: #2f5e74;
+    color: $primary-color;
     border-bottom: 2px dashed #d9d9d6;
     padding-bottom: 1rem;
 }

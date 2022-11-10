@@ -1,6 +1,6 @@
 .navbar {
     color: #fff;
-    background-color: #376f89;
+    background-color: $navbar-bg-color;
 
     .container {
         height: 3.6rem;
@@ -90,7 +90,7 @@
                         position: fixed;
                         top: 3.6rem;
                         min-width: 10rem;
-                        background-color: #376f89;
+                        background-color: $navbar-bg-color;
                         list-style: none;
                         padding: 0;
                         margin: 0;
@@ -159,7 +159,7 @@
                 top: 3.6rem;
                 right: 0;
                 height: calc(100vh - 3.6rem);
-                background-color: #376f89;
+                background-color: $navbar-bg-color;
                 box-sizing: border-box;
                 padding-bottom: .4rem;
 
