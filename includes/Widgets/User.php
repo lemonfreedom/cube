@@ -130,13 +130,14 @@ class User extends Widget
     private function login()
     {
         $data = $this->request->post();
-
         $v = new Validator($data, [
             'account' => [['type' => 'required', 'message' => '用户名或邮箱不能为空']],
             'password' => [['type' => 'required', 'message' => '密码不能为空']],
         ]);
         if (!$v->run()) {
-            Notice::set($v->result[0]['message'], 'warning');
+            Notice::set(array_map(function ($value) {
+                return $value['message'];
+            }, $v->result), 'warning');
             $this->response->goBack();
         }
 

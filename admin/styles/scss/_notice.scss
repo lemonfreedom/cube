@@ -1,49 +1,32 @@
-@keyframes fade {
-    10% {
-        opacity: 1;
+.msg {
+    width: 100%;
+    background-color: whitesmoke;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    ul {
+        padding-left: 1rem;
+        margin: 0;
+
+        li {
+            line-height: 1.6rem;
+        }
     }
 
-    90% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-.notice {
-    position: fixed;
-    min-width: 18rem;
-    top: .4rem;
-    left: 50%;
-    height: 2.8rem;
-    line-height: 2.8rem;
-    transform: translateX(-50%);
-    color: #fff;
-    opacity: 0;
-    animation: fade 3s forwards;
-    z-index: 10000;
-    border-radius: .3rem;
-    filter: drop-shadow(0 0 .2rem rgba(0, 0, 0, .5));
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &.info {
+    &.msg-info {
         background-color: $primary-color;
     }
 
-    &.warning {
+    &.msg-warning {
         background-color: $warning-color;
     }
 
-    &.error {
+    &.msg-error {
         background-color: $error-color;
     }
 
-    &.success {
+    &.msg-success {
         background-color: $success-color;
     }
 }

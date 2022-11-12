@@ -1,23 +1,56 @@
 .login {
-    padding-top: 10%;
+    .header {
+        color: white;
+        background: url("/admin/images/bg-shapes.svg") #08447a no-repeat center center;
+        background-size: cover;
 
-    .board {
-        width: 100%;
-        max-width: 18rem;
-        margin: 0 auto;
+        .left {
+            .site-name {
+                padding: 2rem 0;
+                margin: 0;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+        }
+    }
 
-        .login-title {
-            font-size: 2.4rem;
-            color: #444;
-            text-align: center;
+    .page {
+        .title {
+            font-size: 3rem;
+            font-weight: lighter;
+            color: #064771;
             margin: 2rem 0;
         }
+    }
 
-        .tools {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
+    .content {
+        .content-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+
+            .right {
+                .link-tools {
+                    margin-bottom: 2rem;
+                    display: flex;
+                    gap: 1rem;
+                }
+
+                .description {
+                    margin: 0 0 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .login {
+        .content {
+            .content-body {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
         }
     }
 }

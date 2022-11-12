@@ -9,7 +9,7 @@ class Cookie
     /**
      * @var string
      */
-    private static $prefix = 'inspiration_';
+    private static $prefix = 'cube_';
 
     /**
      * @var string

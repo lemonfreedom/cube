@@ -9,11 +9,11 @@ class Notice
     /**
      * 设置通知
      *
-     * @param string $message 通知信息
+     * @param string $content 通知内容
      * @param string $type 通知类型
      */
-    public static function set($message, $type = 'info')
+    public static function set($content, $type = 'info')
     {
-        Cookie::set('notice', json_encode(['type' => $type, 'message' => $message]), time() + 10);
+        Cookie::set('notice', json_encode(['type' => $type, 'content' => $content]), time() + 10);
     }
 }

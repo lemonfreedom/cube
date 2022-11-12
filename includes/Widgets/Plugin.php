@@ -4,7 +4,7 @@ namespace Widgets;
 
 use Cube\Notice;
 use Cube\Widget;
-use Cube\Plugin as InspirationPlugin;
+use Cube\Plugin as CubePlugin;
 use Helpers\Renderer;
 
 class Plugin extends Widget
@@ -18,7 +18,7 @@ class Plugin extends Widget
 
     public function init()
     {
-        $this->plugins = InspirationPlugin::export();
+        $this->plugins = CubePlugin::export();
     }
 
     /**
@@ -86,9 +86,9 @@ class Plugin extends Widget
         // 激活插件
         call_user_func([$class, 'activation']);
 
-        InspirationPlugin::activation($class, $settings);
+        CubePlugin::activation($class, $settings);
 
-        Option::alloc()->set('plugin', serialize(InspirationPlugin::export()));
+        Option::alloc()->set('plugin', serialize(CubePlugin::export()));
 
         Notice::set('启用成功', 'success');
         $this->response->goBack();
@@ -111,9 +111,9 @@ class Plugin extends Widget
             call_user_func([$class, 'deactivation']);
         }
 
-        InspirationPlugin::deactivation($class);
+        CubePlugin::deactivation($class);
 
-        Option::alloc()->set('plugin', serialize(InspirationPlugin::export()));
+        Option::alloc()->set('plugin', serialize(CubePlugin::export()));
 
         Notice::set('禁用成功', 'success');
         $this->response->goBack();

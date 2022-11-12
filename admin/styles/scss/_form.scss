@@ -17,15 +17,12 @@
 .textarea,
 .select {
     width: 100%;
-    outline: none;
     box-sizing: border-box;
-    color: #333;
-    background-color: #fff;
-    border: 0;
+    border: 1px solid gainsboro;
     border-radius: 0;
 
     &:focus {
-        background-color: #e4e9f3;
+        outline-color: $primary-color;
     }
 }
 
@@ -64,7 +61,8 @@
     background-color: #e6e6e6;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: #dfdfdf;
     }
 
@@ -77,8 +75,9 @@
         color: #fff;
         background-color: $primary-color;
 
-        &:hover {
-            background-color: $primary-color;
+        &:hover,
+        &:focus {
+            background-color: darken($primary-color, 6%);
         }
     }
 }

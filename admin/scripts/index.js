@@ -1,15 +1,28 @@
 // 显示通知
-const showNotice = (message, type = 'info') => {
-    let content = `<div class="notice ${type}">${message}</div>`;
-    document.body.innerHTML += content;
+const showNotice = (content, type = 'info') => {
+    const messageEl = document.createElement('div');
+    messageEl.classList.add('msg');
+    messageEl.classList.add(`msg-${type}`);
+    if (Object.prototype.toString.call(content) === '[object Array]') {
+        const msgListEl = document.createElement('ul');
+        content.forEach(msg => {
+            const msgItemEl = document.createElement('li');
+            msgItemEl.innerText = msg;
+            msgListEl.appendChild(msgItemEl);
+        });
+        messageEl.appendChild(msgListEl);
+    } else {
+        messageEl.innerText = content;
+    }
+    document.querySelector('#content').insertAdjacentElement('afterBegin', messageEl);
 }
 
 // cookie 通知
-let notice = Cookies.get('inspiration_notice');
+let notice = Cookies.get('cube_notice');
 if (notice) {
-    const { message, type } = JSON.parse(notice);
-    showNotice(message, type);
-    Cookies.remove('inspiration_notice');
+    const { content, type } = JSON.parse(notice);
+    showNotice(content, type);
+    Cookies.remove('cube_notice');
 };
 
 // 汉堡包切换

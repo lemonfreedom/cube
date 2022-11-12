@@ -1,6 +1,6 @@
-$primary-color: #21759b;
-$warning-color: #d54e21;
-$error-color: #d8221e;
+$primary-color: #064771;
+$warning-color: #fbd4a2;
+$error-color: #ebcccc;
 $success-color: #106d30;
 $navbar-bg-color: #333333;
 
@@ -11,10 +11,9 @@ body {
 }
 
 body {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1;
     color: #333;
-    background-color: #efefef;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,7 +24,7 @@ a {
     color: $primary-color;
 
     &:hover {
-        color: $warning-color;
+        color: darken($primary-color, 6%);
     }
 }
 
@@ -35,15 +34,4 @@ a {
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
-}
-
-.title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
-    color: $primary-color;
-    border-bottom: 2px dashed #d9d9d6;
-    padding-bottom: 1rem;
 }
