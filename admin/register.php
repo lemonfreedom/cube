@@ -15,7 +15,7 @@
                     <form class="left" action="<?= site_url('/user/register') ?>" method="POST">
                         <div class="field">
                             <label class="label" for="">用户名</label>
-                            <input class="input" name="account" type="text" autofocus>
+                            <input class="input" name="username" type="text" autofocus>
                         </div>
                         <div class="field">
                             <label class="label" for="">邮箱</label>
