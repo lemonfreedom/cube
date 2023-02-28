@@ -3,16 +3,16 @@
 /**
  * 翻译
  *
- * @param string $string 待翻译字符串
+ * @param string $text 待翻译文本
  * @param array $args 翻译参数
  * @return string
  */
-function _t($string, ...$args)
+function _t($text, ...$args)
 {
     if (empty($args)) {
-        return \Cube\I18n::translate($string);
+        return \Cube\I18n::translate($text);
     } else {
-        return vsprintf(\Cube\I18n::translate($string), $args);
+        return vsprintf(\Cube\I18n::translate($text), $args);
     }
 }
 

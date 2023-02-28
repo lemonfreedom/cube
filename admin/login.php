@@ -24,7 +24,7 @@
                         <button class="btn btn-primary btn-full" type="submit"><?= _t('登录') ?></button>
                     </form>
                     <div class="right">
-                        <p class="description">Cube 是一款极简博客程序</p>
+                        <p class="description"><?= $option->get('description') ?></p>
                         <div class="link-tools">
                             <a href="/">返回首页</a>
                             <a href="/admin/register.php">账号注册</a>

@@ -35,7 +35,7 @@ namespace {
 namespace Cube {
     class Common
     {
-        public static function init()
+        public static function initialize()
         {
             // 异常处理
             if (!DEBUG) {
@@ -52,22 +52,7 @@ namespace Cube {
                     $code = $e->getCode() === 0 ? 500 : $e->getCode();
                     \Cube\Response::instance()->setStatus($code);
 
-                    echo <<<HTML
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Error {$code}</title>
-    <style>
-        body { height: 100%; padding: 10% 15px 0; background: #fafafa; color: #777; }
-        h1 { text-align: center; font-weight: lighter; letter-spacing: normal; font-size: 3rem; margin: 0; color: #222; }
-    </style>
-</head>
-<body>
-    <h1>{$message}</h1>
-</body>
-</html>\n
-HTML;
+                    include ROOT_DIR . 'admin/error.php';
                 });
             }
 

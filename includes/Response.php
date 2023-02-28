@@ -9,6 +9,12 @@ class Response
      */
     private static $instance;
 
+
+    /**
+     * @var Request
+     */
+    private $request;
+
     /**
      * @var array
      */

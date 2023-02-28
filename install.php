@@ -61,9 +61,10 @@ $db->create('options', [
 $db->insert('options', [
     ['name' => 'language', 'value' => 'Chinese'],
     ['name' => 'plugin', 'value' => 'a:0:{}'],
+    ['name' => 'description', 'value' => 'Cube 是一款功能精简，但灵活度极高的 BBS 程序。'],
 ]);
 
-$configString = <<<EOT
+$configText = <<<EOT
 <?php
 // 调试模式
 define('DEBUG', true);
@@ -77,11 +78,14 @@ define('DB', [
     'password' => 'root',
     'port' => 3306,
     'prefix' => '',
-]);\n
+]);
+
+// 加载程序
+require ROOT_DIR . 'includes/Common.php';\n
 EOT;
 
 // 写入配置文件
-file_put_contents(ROOT_DIR . 'config.php', $configString);
+file_put_contents(ROOT_DIR . 'config.php', $configText);
 
 // 返回
-\Cube\Response::instance()->goBack();
+\Cube\Response::instance()->redirect('/');

@@ -29,11 +29,11 @@ class I18n
     /**
      * 翻译
      *
-     * @param string $string
+     * @param string $text
      * @return string
      */
-    public static function translate($string)
+    public static function translate($text)
     {
-        return self::$messages !== null ? (array_column(self::$messages, 'value', 'id')[$string] ?? $string) : $string;
+        return self::$messages !== null ? (array_column(self::$messages, 'value', 'id')[$text] ?? $text) : $text;
     }
 }
